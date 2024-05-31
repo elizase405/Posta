@@ -17,8 +17,8 @@ const Navbar = ({ isAuthenticated, logout }) => {
             </>
           ) : (
             <>
-            <Link to="/login" className="hover:bg-gray-800 p-2 rounded mr-4">Login</Link>
-            <Link to="/signup" className="hover:bg-gray-800 p-2 rounded">Signup</Link>
+            <Link to="/api/auth/login" className="hover:bg-gray-800 p-2 rounded mr-4">Login</Link>
+            <Link to="/api/auth/signup" className="hover:bg-gray-800 p-2 rounded">Signup</Link>
           </>
           )}
         </div>
