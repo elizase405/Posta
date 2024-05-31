@@ -1,7 +1,7 @@
 const Recipe = require('../models/Recipe');
 
 exports.getRecipes = async (req, res) => {
-    Recipe.find({}).then(data => res.json(data)).catch(err => console.log(err))
+    Recipe.find({}).then(data => res.status(200).json(data)).catch(err => res.status(500).json({ message: err.message })
 };
 
 exports.getRecipeById = async (req, res) => {
@@ -10,7 +10,7 @@ exports.getRecipeById = async (req, res) => {
         if (!recipe) {
             return res.status(404).json({ message: 'Recipe not found' });
         }
-        res.json(recipe);
+        res.status(200).json(recipe);
   } catch (err) {
         console.error(err.message);
         if (err.kind === 'ObjectId') {
@@ -33,7 +33,7 @@ exports.createRecipe = async (req, res) => {
     });
 
     const recipe = await newRecipe.save();
-    res.json(recipe);
+    res.status(201).json(recipe);
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
@@ -58,7 +58,7 @@ exports.deleteRecipe = async (req, res) => {
     // Delete the recipe
     await Recipe.findByIdAndDelete(id);
 
-    res.json({ message: 'Recipe deleted successfully' });
+    res.status(200).json({ message: 'Recipe deleted successfully' });
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');

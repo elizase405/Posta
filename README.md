@@ -52,7 +52,7 @@ To use this project, follow these steps:
 ## Running Tests
 To run tests, use the following command:
 ```bash
-npm test  # For Node.js projects
+npm test
 ```
 
 ## Contributing
@@ -73,13 +73,228 @@ To contribute to this project, please follow these steps:
 
 ## API Documentation
 
-## Base URL
+### Base URL
 - The base URL for the authentication API endpoints is: https://posta-qwxv.onrender.com/api/auth
 - The base URL for the recipes API endpoints is: https://posta-qwxv.onrender.com/api/recipes
 
 
+### Endpoints
 
+#### 1. User Registration
 
+**Endpoint:** `/api/auth/signup`  
+**Method:** `POST`  
+**Description:** Registers a new user.  
+**Request Body:**
+```json
+{
+  "username": "string",
+  "email": "string",
+  "name": "string",
+  "password": "string"
+}
+```
+Response:
+- 201 Created
+```json
+{
+  "message": "User created successfully",
+  "user": {
+    "id": "string",
+    "username": "string",
+    "email": "string"
+  }
+}
+```
+- 400 Bad Request
+```json
+{
+  "error": "User already exists"
+}
+```
+- 500 Server error
+```json
+{
+  "error": "Server error
+}
+``` 
 
+#### 2. User Login
+
+**Endpoint:** `/api/auth/login`  
+**Method:** `POST`  
+**Description:** Authenticates a user and returns a token.  
+**Request Body:**
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
+Response:
+- 200 OK
+```json
+{
+  "token": "jwt_token"
+}
+
+```
+- 401 Unauthorized
+```json
+{
+  "error": "Invalid details"
+}
+```
+```
+- 500 Server error
+```json
+{
+  "error": "Server error
+}
+``` 
+
+####  3. Get recipes
+
+**Endpoint:** `/api/auth/recipes`  
+**Method:** `GET`  
+**Description:** Get all available recipes.  
+**Request Body:**
+```json
+{
+  "title": "string",
+  "description": "string",
+  "ingredients": "string",
+  "instructions": "string",
+  "author": "string"
+}
+```
+Response:
+- 200 OK
+```json
+{
+  "title": "string",
+  "description": "string",
+  "ingredients": "string",
+  "instructions": "string",
+  "author": "string"
+}
+```
+- 500 Server Error
+```json
+{
+  "message": err.message
+}
+```  
+
+#### 4. Get a recipe
+
+**Endpoint:** `/api/auth/recipes/:id`  
+**Method:** `POST`  
+**Description:** Gets a recipe.  
+**Request Body:**
+```json
+{
+  "title": "string",
+  "description": "string",
+  "ingredients": "string",
+  "instructions": "string",
+  "author": "string"
+}
+```
+Response:
+- 200 OK
+```json
+{
+  "title": "string",
+  "description": "string",
+  "ingredients": "string",
+  "instructions": "string",
+  "author": "string"
+}
+
+```
+- 404 Not Found
+```json
+{
+  "message": "Recipe not found"
+}
+```
+```
+- 500 Server error
+```json
+{
+  "error": "Server error
+}
+``` 
+
+#### 5. Create Recipe
+
+**Endpoint:** `/api/auth/recipes`  
+**Method:** `POST`  
+**Description:** Create a new recipe.  
+**Request Body:**
+```json
+{
+  "title": "string",
+  "description": "string",
+  "ingredients": "string",
+  "instructions": "string",
+  "author": "string"
+}
+```
+Response:
+- 201 Created
+```json
+{
+  "title": "string",
+  "description": "string",
+  "ingredients": "string",
+  "instructions": "string",
+  "author": "string"
+}
+```
+- 500 Server error
+```json
+{
+  "error": "Server error
+}
+``` 
+
+#### 6. Delete Recipe
+
+**Endpoint:** `/api/auth/recipes/:id`  
+**Method:** `POST`  
+**Description:** Deletes a recipe associated to the logged in user
+**Request Body:**
+```json
+{
+  "title": "string",
+  "description": "string",
+  "ingredients": "string",
+  "instructions": "string",
+  "author": "string"
+}
+```
+Response:
+- 200 OK
+```json
+{
+  "message": "Recipe deleted successfully"
+}
+
+```
+- 404 Not Found
+```json
+{
+  "message": "Recipe not found"
+}
+```
+```
+- 500 Server error
+```json
+{
+  "error": "Server error
+}
+``` 
 
 
