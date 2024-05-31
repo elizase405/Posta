@@ -115,7 +115,7 @@ Response:
 - 500 Server error
 ```json
 {
-  "error": "Server error
+  "error": "Server error"
 }
 ``` 
 
@@ -149,7 +149,7 @@ Response:
 - 500 Server error
 ```json
 {
-  "error": "Server error
+  "error": "Server error"
 }
 ``` 
 
@@ -182,7 +182,7 @@ Response:
 - 500 Server Error
 ```json
 {
-  "message": err.message
+  "message": "err.message"
 }
 ```  
 
@@ -223,7 +223,7 @@ Response:
 - 500 Server error
 ```json
 {
-  "error": "Server error
+  "error": "Server error"
 }
 ``` 
 
@@ -256,7 +256,7 @@ Response:
 - 500 Server error
 ```json
 {
-  "error": "Server error
+  "error": "Server error"
 }
 ``` 
 
@@ -289,11 +289,10 @@ Response:
   "message": "Recipe not found"
 }
 ```
-```
 - 500 Server error
 ```json
 {
-  "error": "Server error
+  "error": "Server error"
 }
 ``` 
 
