@@ -30,8 +30,8 @@ const [authToken, setAuthToken] = useState(localStorage.getItem('token'));
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/recipes/:id" element={<RecipeDetail />} />
-            <Route path="/api/auth/login" element={<Login />} />
-            <Route path="/api/auth/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard isAuthenticated={!!authToken} />} />
             <Route path="/add-recipe" element={<AddEditRecipe isAuthenticated={!!authToken}/>} />
             <Route path="/edit-recipe/:id" element={<AddEditRecipe />} />

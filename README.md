@@ -1,7 +1,7 @@
 # Posta
 
 ## Overview
-Posta is a platform where users can share and discover recipes. This project provides users with quality recipes that can be used to cook up a delicious meal. The main features include User Authentication, Recipe Management and Responsive Design.
+[Posta](https://posta-kmzg.onrender.com/) is a platform where users can share and discover recipes. This project provides users with quality recipes that can be used to cook up a delicious meal. The main features include User Authentication, Recipe Management and Responsive Design.
 
 ## Features
 - User Authentication:

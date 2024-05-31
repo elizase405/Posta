@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-const auth = 'https://posta-qwxv.onrender.com/api/auth'
-const api = 'https://posta-qwxv.onrender.com/api/recipes' 
+const baseUrl = 'https://posta-qwxv.onrender.com/'
+const auth = baseUrl + 'api/auth'
+const api = baseUrl + 'api/recipes' 
 
 export const getAllRecipes = async () => {
   const response = await axios.get(api);
