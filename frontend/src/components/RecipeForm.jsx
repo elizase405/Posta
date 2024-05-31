@@ -41,7 +41,7 @@ const RecipeForm = ({ recipeId }) => {
       await createRecipe(recipeData);
     }
 
-    navigate('/dashboard');
+    navigate('/');
   };
 
   return (
