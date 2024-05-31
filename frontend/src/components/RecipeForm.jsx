@@ -25,6 +25,7 @@ const RecipeForm = ({ recipeId }) => {
   }, [recipeId]);
 
   const handleSubmit = async (e) => {
+    e.preventDefault()
     const recipeData = {
       title,
       description,

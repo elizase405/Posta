@@ -8,6 +8,7 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
+    e.preventDefault()
     const loginDetails = {username, password}
     const res = await login(loginDetails)
     .then(data => {

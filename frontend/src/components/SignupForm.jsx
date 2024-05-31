@@ -10,6 +10,7 @@ const SignupForm = () => {
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
+    e.preventDefault()
     const newUser = { username, email, name, password };
     await signup(newUser).then().catch(err => alert(err.response.data.message));
     localStorage.setItem(newUser.username, JSON.stringify([newUser]));
