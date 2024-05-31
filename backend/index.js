@@ -15,13 +15,7 @@ mongoose.connect(MONGO_URI)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('Error connecting to MongoDB:', err));
 
-const corsOptions = {
-  origin: 'https://posta-kmzg.onrender.com/',
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
-
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
