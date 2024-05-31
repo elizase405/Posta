@@ -38,7 +38,7 @@ To install this project, follow these steps:
     ```bash
     touch .env
     ```
-    Then, include your configuration settings intot he .env file.
+    Then, include your configuration settings into the .env file.
 
 ## Usage
 To use this project, follow these steps:
@@ -47,12 +47,13 @@ To use this project, follow these steps:
     ```bash
     npm start
     ```
-2. Open your web browser and navigate to `http://localhost:${process.env.PORT`
+2. Open your web browser and navigate to `http://localhost:${process.env.PORT}`
 
 ## Running Tests
 To run tests, use the following command:
 ```bash
 npm test  # For Node.js projects
+```
 
 ## Contributing
 To contribute to this project, please follow these steps:
