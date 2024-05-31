@@ -1,0 +1,62 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Spaghetti Bolognese",
+      "description": "A classic Italian pasta dish.",
+      "ingredients": [
+        "200g spaghetti",
+        "100g ground beef",
+        "1 onion",
+        "2 cloves of garlic",
+        "400g canned tomatoes",
+        "Salt",
+        "Pepper"
+      ],
+      "instructions": "1. Cook spaghetti. 2. Brown the ground beef with chopped onion and garlic. 3. Add tomatoes and simmer. 4. Mix with spaghetti.",
+      "author": "john_doe"
+    },
+    {
+      "id": "2",
+      "title": "Chicken Curry",
+      "description": "A spicy and flavorful chicken curry.",
+      "ingredients": [
+        "500g chicken breast",
+        "2 onions",
+        "3 cloves of garlic",
+        "1 ginger piece",
+        "2 tbsp curry powder",
+        "400ml coconut milk",
+        "Salt"
+      ],
+      "instructions": "1. Fry onions, garlic, and ginger. 2. Add chicken and brown. 3. Add curry powder and coconut milk. 4. Simmer until chicken is cooked.",
+      "author": "jane_doe"
+    },
+    {
+      "id": "2017",
+      "title": "bsjb ann",
+      "description": "kjhsnam",
+      "ingredients": [
+        "kjanmn"
+      ],
+      "instructions": "nmajn",
+      "author": "john_doe"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "password": "password123",
+      "email": "john@example.com",
+      "name": "John Doe"
+    },
+    {
+      "id": "2",
+      "username": "jane_doe",
+      "password": "password123",
+      "email": "jane@example.com",
+      "name": "Jane Doe"
+    }
+  ]
+}
