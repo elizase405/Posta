@@ -1,7 +1,9 @@
 const Recipe = require('../models/Recipe');
 
 exports.getRecipes = async (req, res) => {
-    Recipe.find({}).then(data => res.status(200).json(data)).catch(err => res.status(500).json({ message: err.message })
+    Recipe.find({})
+        .then(data => res.status(200).json(data))
+        .catch(err => res.status(500).json({ message: err.message }))
 };
 
 exports.getRecipeById = async (req, res) => {
