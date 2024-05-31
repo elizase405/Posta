@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:5000/'
+const baseUrl = 'https://posta-qwxv.onrender.com/'
 const auth = baseUrl + 'api/auth'
 const api = baseUrl + 'api/recipes' 
 
